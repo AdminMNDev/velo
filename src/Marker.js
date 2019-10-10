@@ -11,14 +11,54 @@ var myIcon = L.icon({
 })
 
 class MarkerVelo extends Component{
-    render(){
-        return(
-        <Marker position={this.props.position} icon={myIcon}>
-          <Popup>
-            Mon premier icone <br /> Avec React.JS ! ;)
-          </Popup>
-        </Marker>
+    constructor(props){
+        super(props)
+        this.state = {
+            error: null,
+            isLoaded: false,
+            stations: []
+        }
+    }
+
+    componentDidMount(){
+        fetch("https://api.jcdecaux.com/vls/v1/stations?contract=Lyon&apiKey=45e68957d549cc855a39a0557d92e8f2f91ffa5f")
+        .then(res => res.json())
+        .then(
+            (stations) => {
+                this.setState({
+                    isLoaded: true,
+                    stations: stations
+                })
+            },
+            //on récupère l'erreur de l'appelle
+            (error) => {
+                this.setState({
+                    isLoaded: true,
+                    error
+                })
+            }
         )
     }
+
+    render(){
+        const { isLoaded, stations } = this.state
+        // const station = [this.state.stations[0].position.lat]
+        if(isLoaded){
+            return(
+                (stations.map(station => (
+                    <Marker position={station.position} icon={myIcon} key={station.name}>
+                       <Popup>
+                           {station.name}
+                       </Popup>
+                    </Marker>
+                        )   
+                    )
+                )
+            )
+        }else{
+             return(<p>Loading . . .</p>)
+        }
+    }   
 }
+
 export default MarkerVelo
