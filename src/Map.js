@@ -19,10 +19,8 @@ class MapVelo extends Component{
         />
         <MarkerVelo position={position}/>
       </Map>
-      
     )
   }
-
 }
 export default MapVelo
 
