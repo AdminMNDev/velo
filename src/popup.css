@@ -1,0 +1,42 @@
+.avl_bikes{
+    float: left;
+    height: 100px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 30px;
+}
+.avl_bikes img{
+   width: 50px;
+   margin-right: 10px;
+   filter: drop-shadow(3px 3px 1px rgba(131, 186, 0));
+   -webkit-filter: drop-shadow(3px 3px 1px rgb(131, 186, 0))
+}
+.text_avl_bikes{
+    border: 1px solid black;
+    background-color: rgb(131, 186, 0);
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+}
+p.first_text_popup{
+    border-bottom: 1px solid white;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    color: black;
+}
+p.second_text_popup{
+    margin-top: 0px;
+    color: white;
+}
+p.last_text_popup{
+    margin-top: -10px;
+}
+
+/* LEAFLET */
+.leaflet-popup{
+    width: 350px;
+}
