@@ -12,13 +12,15 @@ class MapVelo extends Component{
   render(){
     const position = [this.state.lat, this.state.lng, this.state.zoom]
     return(
+      <div>
       <Map className="map" center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <MarkerVelo position={position}/>
+        <MarkerVelo position={position} formulaire={this.props.formulaire}/>
       </Map>
+      </div>
     )
   }
 }
