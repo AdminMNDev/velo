@@ -1,0 +1,29 @@
+body{
+    background-color: #efeded;
+
+}
+.container-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+form{
+    border: 2px dotted black;
+    border-radius: 2%;
+    height: 100%;
+    text-align: center;
+}
+.input-form{
+    margin-bottom: 25px
+}
+.input-form input{
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+}
+.input-reservation{
+    display: flex;
+    margin: auto;
+    margin-bottom: 25px
+}

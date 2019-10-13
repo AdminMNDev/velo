@@ -6,40 +6,40 @@ import ReservationVelo from './Reservation';
 
 
 class App extends Component{
-  state = {
-    mapIsVisible: true,
-    mapIsDisplay: true,
-    formIsVisible: false
+  constructor(props){
+    super(props)
+    this.state = {
+      formIsVisible: false,
+      formBlockIsVisible: false
+    }   
   }
 
   isVisible = () => {
     this.setState({
-      mapIsVisible: false,
-      formIsVisible: true
+      formBlockIsVisible: true
     })
-
-    //Permet de display le bloc de la map pour ne pas crée un vide.
-    setTimeout(
-      () => {
-          this.setState({mapIsDisplay: false})
-          console.log(this.state.mapIsDisplay)
-      },
-      400)
+    //Permet de gerer le soucis de bloc vide avec un decallage entre les fonctions.
+    setTimeout(() => {
+      window.scrollTo(0, window.innerHeight)
+    }, 50);
+    setTimeout(() => {
+      this.setState({
+        formIsVisible: true
+      })
+    }, 350);
   }
+
   render(){
     return(
       <div>
-      {/* Permet de cacher le bloc de la map une fois l'animation finit */}
-      {this.state.mapIsDisplay ? 
-        <Animated animationIn="bounceInLeft" animationOut="zoomOutUp" animationOutDuration={400} isVisible={this.state.mapIsVisible}>
-          <MapVelo formulaire={this.isVisible} />
+        <Animated className="animation-map" animationIn="bounceInLeft" isVisible={this.state.mapIsVisible}>
+          <MapVelo formulaire={this.isVisible}/>
         </Animated>
-          : 
-        ' '
-      }
-      <Animated animationIn="bounceInLeft" animationOut="fadeOut" isVisible={this.state.formIsVisible}>
-        <ReservationVelo />
-      </Animated>
+      {this.state.formBlockIsVisible ?
+        <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={0} isVisible={this.state.formIsVisible}>
+          <ReservationVelo />
+        </Animated>
+      : ""}
       </div>
     )
   }

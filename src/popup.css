@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 .avl_bikes{
     float: left;
     height: 100px;
@@ -34,6 +37,18 @@ p.second_text_popup{
 }
 p.last_text_popup{
     margin-top: -10px;
+}
+.button{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgb(131, 186, 0);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
 }
 
 /* LEAFLET */
