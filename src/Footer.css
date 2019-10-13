@@ -1,0 +1,25 @@
+.container-footer{
+    background-color: black;
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.social-media{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.container-footer a{
+    background-color: white;
+    border-radius: 5%;
+    max-height: 64px;
+    margin: auto;
+
+}
+.container-footer p {
+    padding: 2rem;
+}
+.container-footer span{
+    color: red;
+}

@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import MapVelo from './Map'
 import { Animated } from 'react-animated-css';
 import ReservationVelo from './Reservation';
+import FooterVelo from './Footer';
+import "./reset.css";
+import MenuVelo from './Menu';
 
 
 
@@ -10,8 +13,9 @@ class App extends Component{
     super(props)
     this.state = {
       formIsVisible: false,
-      formBlockIsVisible: false
-    }   
+      formBlockIsVisible: false,
+      mapIsVisible: true
+    }
   }
 
   isVisible = () => {
@@ -32,14 +36,22 @@ class App extends Component{
   render(){
     return(
       <div>
-        <Animated className="animation-map" animationIn="bounceInLeft" isVisible={this.state.mapIsVisible}>
+      {/* Menu */}
+        <Animated className="animation-map" animationIn="bounceInLeft" animationInDuration={2000} isVisible={true}>
+          <MenuVelo />
+        </Animated>
+      {/* Map */}
+        <Animated className="animation-map" animationIn="bounceInLeft" animationInDuration={2500} animationOutDuration={0} isVisible={this.state.mapIsVisible}>
           <MapVelo formulaire={this.isVisible}/>
         </Animated>
+      {/* Form */}
       {this.state.formBlockIsVisible ?
         <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={0} isVisible={this.state.formIsVisible}>
           <ReservationVelo />
         </Animated>
       : ""}
+      {/* Footer */}
+      <FooterVelo />
       </div>
     )
   }

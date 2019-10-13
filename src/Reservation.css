@@ -1,18 +1,19 @@
 body{
     background-color: #efeded;
-
 }
 .container-form{
     width: 100%;
     display: flex;
     justify-content: center;
     padding-top: 100px;
+    margin-bottom: 100px;
 }
 form{
     border: 2px dotted black;
     border-radius: 2%;
     height: 100%;
     text-align: center;
+    padding: 20px;
 }
 .input-form{
     margin-bottom: 25px
@@ -25,5 +26,6 @@ form{
 .input-reservation{
     display: flex;
     margin: auto;
-    margin-bottom: 25px
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
