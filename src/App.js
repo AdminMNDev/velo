@@ -6,6 +6,7 @@ import FooterVelo from './Footer';
 import "./reset.css";
 import MenuVelo from './Menu';
 import BanniereVelo from './Baniere';
+import SliderVelo from './Slider';
 
 
 
@@ -25,7 +26,7 @@ class App extends Component{
     })
     //Permet de gerer le soucis de bloc vide avec un decallage entre les fonctions.
     setTimeout(() => {
-      window.scrollTo(0, window.innerHeight * 2)
+      window.scrollTo(0, window.innerHeight * 3)
     }, 50);
     setTimeout(() => {
       this.setState({
@@ -42,11 +43,15 @@ class App extends Component{
           <MenuVelo />
         </Animated>
       {/* Baniere */}
-        <BanniereVelo />
-      {/* Map */}
-        <Animated className="animation-map" animationIn="bounceInLeft" animationInDuration={2500} animationOutDuration={0} isVisible={this.state.mapIsVisible}>
-          <MapVelo formulaire={this.isVisible}/>
+        <Animated animationIn="bounceInRight" animationInDuration={2000} isVisible={true}>
+          <BanniereVelo />
         </Animated>
+      {/* Slider */}
+        <Animated className="animation-map" animationIn="bounceInLeft" animationInDuration={2000} isVisible={true}>
+          <SliderVelo />
+        </Animated>
+      {/* Map */}  
+          <MapVelo formulaire={this.isVisible}/>
       {/* Form */}
       {this.state.formBlockIsVisible ?
         <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={0} isVisible={this.state.formIsVisible}>

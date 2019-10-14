@@ -1,0 +1,20 @@
+.container-slider{
+    background-color: white;
+}
+.container-slider h2{
+    text-align: center;
+    padding-top: 50px;
+}
+.border-bottom-slider{
+    border-bottom: 2px solid red;
+    margin: auto;
+    width: 260px;
+}
+.slider{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+.text-slider{
+    margin: auto;
+}
