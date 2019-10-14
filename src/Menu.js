@@ -1,11 +1,17 @@
 import React, { Component } from 'react'
-
+import './Menu.css'
 class MenuVelo extends Component{
 
   render(){
     return(
-      <div>
-        Hi
+      <div className="container-menu">
+      <div className="menu">
+        <div className="menu-text">
+          <h1>Vélo'<span> Taff</span></h1>
+          <h2><span>GRAND</span>LYON</h2>
+          <h3>La métropole</h3>
+        </div>
+        </div>
       </div>
     )
   }

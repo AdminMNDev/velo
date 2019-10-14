@@ -1,0 +1,32 @@
+.container-menu{
+    background-color: #efeded;
+    color: white;
+    box-shadow: 1px 2px 10px black;
+    width: 100%;
+}
+.container-menu p{
+    padding: 2rem;
+}
+.menu{
+    width: 80%;
+    margin: auto;
+}
+.menu-text{
+    text-align: right;
+    padding: 0.75rem;
+}
+.menu-text h1{
+    float: left;
+    color: black;
+}
+.menu-text h2{
+    color: black;
+}
+.menu-text span{
+    color: red;
+}
+.menu-text h3{
+    color: black;
+    font-size: 1rem;
+    margin-top: -10px;
+}
