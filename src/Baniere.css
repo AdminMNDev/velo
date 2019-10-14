@@ -1,0 +1,15 @@
+.container-baniere{
+    height: 600px;
+    background-image: url("./header.png");
+    display: flex;
+}
+.bordure-baniere{
+    margin: auto;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+}
+.container-baniere span{
+    color: red;
+}
