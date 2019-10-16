@@ -21,12 +21,16 @@ class App extends Component{
       mapIsVisible: true,
       compteurIsVisible: false,
       compteurBlockIsVisible: false,
+      stationNom: '',
+      stationAdresse: ''
     }
   }
 
-  isVisible = () => {
+  formIsVisible = (nom, adresse) => {
     this.setState({
-      formBlockIsVisible: true
+      formBlockIsVisible: true,
+      stationNom: nom,
+      stationAdresse: adresse
     })
     //Permet de gerer le soucis de bloc vide avec un decallage entre les fonctions.
     setTimeout(() => {
@@ -36,7 +40,20 @@ class App extends Component{
       this.setState({
         formIsVisible: true
       })
-    }, 350);
+    }, 350);  
+  }
+
+  compteurIsVisible = (e) => {
+    this.setState({
+      formIsVisible: false
+    })
+    setTimeout(() =>{
+      this.setState({
+        formBlockIsVisible:false,
+        compteurBlockIsVisible: true,
+        compteurIsVisible: true
+      })
+    }, 450)
   }
 
   render(){
@@ -57,16 +74,18 @@ class App extends Component{
         {/* Jumbotron */}
         <JumbotronVelo />
       {/* Map */}  
-          <MapVelo formulaire={this.isVisible}/>
+          <MapVelo formulaire={this.formIsVisible}/>
       {/* Form */}
       {this.state.formBlockIsVisible ?
         <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={450} isVisible={this.state.formIsVisible}>
-          <ReservationVelo />
+          <ReservationVelo  compteur={this.compteurIsVisible}/>
         </Animated>
       : ""}
       {/* Compteur */}
       {this.state.compteurBlockIsVisible ?
-        <Compteur />
+        <Animated animationIn="bounceInRight" animationInDuration={450} isVisible={this.state.compteurIsVisible}>
+          <Compteur stationNom={this.state.stationNom} stationAdresse={this.state.stationAdresse}/>
+        </Animated>
       :  ""}
       {/* Footer */}
       <FooterVelo />

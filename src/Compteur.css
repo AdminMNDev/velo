@@ -1,0 +1,24 @@
+.container-compteur{
+    border: 2px dotted black;
+    border-radius: 2%;
+    height: 100%;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.titre-compteur{
+    padding-top: 2rem;
+    color: black;
+}
+.border-titre-compteur{
+    margin: auto;
+    width: 80px;
+    border: 1px solid red;
+}
+.text-compteur{
+    margin-top: 50px;
+    color: grey;
+}

@@ -3,6 +3,24 @@ import { Popup } from 'react-leaflet'
 import "./popup.css"
 
 class PopupVelo extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            stationNom: '',
+            stationAdresse: '',
+        }
+    }
+
+    getDataStation = (nom, adress) => {
+        this.setState({
+            stationNom: nom,
+            stationAdresse: adress,
+        })
+        //pour gerer le system asycrone
+        setTimeout(() => {
+            this.props.formulaire(this.state.stationNom, this.state.stationAdresse)
+        }, 50);
+    }
   render(){
       const { station } = this.props
     return(
@@ -25,7 +43,7 @@ class PopupVelo extends Component{
                             </div>
                             <p className="last_text_popup">Places libres</p>
                         </div>
-                        <button onClick={this.props.formulaire} className="button">Reserver !</button>
+                        <button onClick={() => this.getDataStation(station.name, station.address)} className="button">Reserver !</button>
                     </div>
             </div>
         </Popup>
