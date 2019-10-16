@@ -28,7 +28,7 @@ loadStation = () =>{ //Permet de charger les stations après l'animation de la m
     const position = [this.state.lat, this.state.lng, this.state.zoom]
     return(
       <div>
-      <Map className="map" center={position} zoom={this.state.zoom}>
+      <Map className="map" center={position} zoom={this.state.zoom} id="map">
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

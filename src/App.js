@@ -7,6 +7,7 @@ import "./reset.css";
 import MenuVelo from './Menu';
 import BanniereVelo from './Baniere';
 import SliderVelo from './Slider';
+import JumbotronVelo from './Jumbotron';
 
 
 
@@ -50,6 +51,8 @@ class App extends Component{
         <Animated className="animation-map" animationIn="bounceInLeft" animationInDuration={2000} isVisible={true}>
           <SliderVelo />
         </Animated>
+        {/* Jumbotron */}
+        <JumbotronVelo />
       {/* Map */}  
           <MapVelo formulaire={this.isVisible}/>
       {/* Form */}
