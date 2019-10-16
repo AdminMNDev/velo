@@ -8,6 +8,7 @@ import MenuVelo from './Menu';
 import BanniereVelo from './Baniere';
 import SliderVelo from './Slider';
 import JumbotronVelo from './Jumbotron';
+import Compteur from './Compteur';
 
 
 
@@ -17,7 +18,9 @@ class App extends Component{
     this.state = {
       formIsVisible: false,
       formBlockIsVisible: false,
-      mapIsVisible: true
+      mapIsVisible: true,
+      compteurIsVisible: false,
+      compteurBlockIsVisible: false,
     }
   }
 
@@ -57,10 +60,14 @@ class App extends Component{
           <MapVelo formulaire={this.isVisible}/>
       {/* Form */}
       {this.state.formBlockIsVisible ?
-        <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={0} isVisible={this.state.formIsVisible}>
+        <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={450} isVisible={this.state.formIsVisible}>
           <ReservationVelo />
         </Animated>
       : ""}
+      {/* Compteur */}
+      {this.state.compteurBlockIsVisible ?
+        <Compteur />
+      :  ""}
       {/* Footer */}
       <FooterVelo />
       </div>
