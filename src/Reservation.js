@@ -7,7 +7,8 @@ class ReservationVelo extends Component{
         super(props)
     this.state = {
         nom: '',
-        prenom: ''
+        prenom: '',
+        isNotEmpty: false
     }
 }
 
@@ -42,7 +43,12 @@ isSumbit = (e) => {
         nom: '',
         prenom: ''
     })
+}
 
+isNotEmpty = () => {
+    this.setState({
+        isNotEmpty: true
+    })
 }
 
   render(){
@@ -53,9 +59,9 @@ isSumbit = (e) => {
                     <input id="name" type="text" name="name" placeholder="Nom" value={this.state.nom} required onChange={this.handleChangeName}></input>
                     <input id="nickname" type="text" name="nickname" placeholder="Prénom" value={this.state.prenom} required onChange={this.handleChangeNickname}></input>
                 </div>
-                <CanvasReservation />
+                <CanvasReservation isNotEmpty={this.isNotEmpty}/>
                 <p>Veuillez apposer votre signature et indiquer votre nom et prénom afin de finaliser votre réservation</p>
-                <input type="submit" value="Reserver" className="input-reservation"></input>
+                {this.state.isNotEmpty ? <input type="submit" value="Reserver" className="input-reservation"></input> : ''}
             </form>
         </div>
     )

@@ -1,6 +1,4 @@
-import React, {
-  Component
-} from 'react'
+import React, { Component } from 'react'
 import './Canvas.css'
 
 class CanvasReservation extends Component {
@@ -38,6 +36,7 @@ class CanvasReservation extends Component {
       this.setState({
         isNotEmpty: true
       })
+      this.props.isNotEmpty()
       let mousePos = this.getMousePos(e)
       this.ctx.lineTo(mousePos.x, mousePos.y)
       this.ctx.stroke()
@@ -61,7 +60,7 @@ class CanvasReservation extends Component {
     return (
     <div >
       <canvas width={300} height={200} ref="canvas" className = "canvas" onMouseDown={this.draw} onMouseMove={this.drawing} onMouseUp={this.unDraw} onMouseLeave={this.unDraw} />
-      {this.state.isNotEmpty ? <button onClick={this.clear}>Effacer</button> : ''}
+      {this.state.isNotEmpty ? <button onClick={this.clear} className="clear-button">Effacer</button> : ''}
     </div>
     )
   }

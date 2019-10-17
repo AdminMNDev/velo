@@ -6,3 +6,12 @@
     display: flex;
     margin-bottom: 25px;
 }
+.clear-button{
+    display: flex;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+}

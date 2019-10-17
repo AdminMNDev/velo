@@ -61,12 +61,12 @@ class Compteur extends Component{
             {this.state.countDown ?
             <div>
                 <p className="text-compteur">temps restant {this.state.m} min et {this.state.s} s</p>
-                <button onClick={this.UnSubscribeCountDown}>Annuler la réservation</button>
+                <button onClick={this.UnSubscribeCountDown} className="button-reservation">Annuler la réservation</button>
             </div>
             : 
             <div>
                 <p className="text-compteur">Réservation périmé</p>
-                <button onClick={this.UnSubscribeCountDown}>Nouvelle réservation</button>
+                <button onClick={this.UnSubscribeCountDown} className="button-reservation">Nouvelle réservation</button>
             </div>}
         </div>
         )

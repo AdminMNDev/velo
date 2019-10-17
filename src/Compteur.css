@@ -22,3 +22,9 @@
     margin-top: 50px;
     color: grey;
 }
+.button-reservation{
+    padding: 10px;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+}

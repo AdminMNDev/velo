@@ -28,4 +28,7 @@ form{
     margin: auto;
     margin-bottom: 20px;
     margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(131, 186, 0);
 }
