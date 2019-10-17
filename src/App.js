@@ -22,12 +22,14 @@ class App extends Component{
       compteurIsVisible: false,
       compteurBlockIsVisible: false,
       stationNom: '',
-      stationAdresse: ''
+      stationAdresse: '',
+      formOut: 0
     }
   }
 
   formIsVisible = (nom, adresse) => {
     this.setState({
+      formOut: 0,
       formBlockIsVisible: true,
       stationNom: nom,
       stationAdresse: adresse
@@ -45,7 +47,8 @@ class App extends Component{
 
   compteurIsVisible = (e) => {
     this.setState({
-      formIsVisible: false
+      formOut: 500,
+      formIsVisible: false,
     })
     setTimeout(() =>{
       this.setState({
@@ -54,6 +57,18 @@ class App extends Component{
         compteurIsVisible: true
       })
     }, 450)
+  }
+
+  compteurIsNotVisible = () => {
+    this.setState({
+      compteurIsVisible: false
+    })
+
+    setTimeout(() => {
+      this.setState({
+        compteurBlockIsVisible: false
+      })
+    }, 850)
   }
 
   render(){
@@ -77,14 +92,14 @@ class App extends Component{
           <MapVelo formulaire={this.formIsVisible}/>
       {/* Form */}
       {this.state.formBlockIsVisible ?
-        <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={450} isVisible={this.state.formIsVisible}>
+        <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={this.state.formOut} isVisible={this.state.formIsVisible}>
           <ReservationVelo  compteur={this.compteurIsVisible}/>
         </Animated>
       : ""}
       {/* Compteur */}
       {this.state.compteurBlockIsVisible ?
         <Animated animationIn="bounceInRight" animationInDuration={450} isVisible={this.state.compteurIsVisible}>
-          <Compteur stationNom={this.state.stationNom} stationAdresse={this.state.stationAdresse}/>
+          <Compteur stationNom={this.state.stationNom} stationAdresse={this.state.stationAdresse} newReservation={this.compteurIsNotVisible}/>
         </Animated>
       :  ""}
       {/* Footer */}
