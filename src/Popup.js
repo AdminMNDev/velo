@@ -12,6 +12,8 @@ class PopupVelo extends Component{
     }
 
     getDataStation = (nom, adress) => {
+        //Aucun reservation doit etre en cours
+        if(this.props.isReserved === false){
         this.setState({
             stationNom: nom,
             stationAdresse: adress,
@@ -20,7 +22,10 @@ class PopupVelo extends Component{
         setTimeout(() => {
             this.props.formulaire(this.state.stationNom, this.state.stationAdresse)
         }, 50);
+    }else{
+        alert('Une réservation est déjà en cours. Merci de l\'annuler')
     }
+}
   render(){
       const { station } = this.props
     return(

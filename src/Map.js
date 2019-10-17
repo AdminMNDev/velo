@@ -34,7 +34,7 @@ loadStation = () =>{ //Permet de charger les stations après l'animation de la m
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {this.state.markerIsVisible ?
-        <MarkerVelo position={position} formulaire={this.props.formulaire}/>
+        <MarkerVelo position={position} formulaire={this.props.formulaire} isReserved={this.props.isReserved}/>
         : ''}
       </Map>
       </div>

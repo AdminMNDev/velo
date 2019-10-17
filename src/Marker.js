@@ -54,12 +54,12 @@ class MarkerVelo extends Component{
                         //velo dispo
                     station.available_bikes > 0 ? 
                         <Marker position={station.position} icon={openIcon} key={station.name}>
-                            <PopupVelo station={station} formulaire={this.props.formulaire}/>
+                            <PopupVelo station={station} formulaire={this.props.formulaire} isReserved={this.props.isReserved}/>
                         </Marker>
                     :
                         //velo indispo
                         <Marker position={station.position} icon={closeIcon} key={station.name}>
-                            <PopupVelo station={station} />
+                            <PopupVelo station={station} isReserved={this.props.isReserved}/>
                         </Marker>
                     )   
                 )

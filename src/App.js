@@ -23,7 +23,8 @@ class App extends Component{
       compteurBlockIsVisible: false,
       stationNom: '',
       stationAdresse: '',
-      formOut: 0
+      formOut: 0,
+      isReserved: false //Pour eviter les doublons de reservations
     }
   }
 
@@ -49,6 +50,7 @@ class App extends Component{
     this.setState({
       formOut: 500,
       formIsVisible: false,
+      isReserved: true
     })
     setTimeout(() =>{
       this.setState({
@@ -61,7 +63,8 @@ class App extends Component{
 
   compteurIsNotVisible = () => {
     this.setState({
-      compteurIsVisible: false
+      compteurIsVisible: false,
+      isReserved: false
     })
 
     setTimeout(() => {
@@ -89,7 +92,7 @@ class App extends Component{
         {/* Jumbotron */}
         <JumbotronVelo />
       {/* Map */}  
-          <MapVelo formulaire={this.formIsVisible}/>
+          <MapVelo formulaire={this.formIsVisible} isReserved={this.state.isReserved}/>
       {/* Form */}
       {this.state.formBlockIsVisible ?
         <Animated className="animation-form" animationIn="fadeIn" animationOut="fadeOut" animationOutDuration={this.state.formOut} isVisible={this.state.formIsVisible}>
