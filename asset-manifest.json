@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/velo/static/css/main.f2c1a82c.chunk.css",
+    "main.js": "/velo/static/js/main.c16e52e5.chunk.js",
+    "main.js.map": "/velo/static/js/main.c16e52e5.chunk.js.map",
+    "runtime-main.js": "/velo/static/js/runtime-main.f37de9a2.js",
+    "runtime-main.js.map": "/velo/static/js/runtime-main.f37de9a2.js.map",
+    "static/css/2.098bc035.chunk.css": "/velo/static/css/2.098bc035.chunk.css",
+    "static/js/2.3851afa7.chunk.js": "/velo/static/js/2.3851afa7.chunk.js",
+    "static/js/2.3851afa7.chunk.js.map": "/velo/static/js/2.3851afa7.chunk.js.map",
+    "index.html": "/velo/index.html",
+    "precache-manifest.b5ed9ff4e5bbf96e3310647fa91141d0.js": "/velo/precache-manifest.b5ed9ff4e5bbf96e3310647fa91141d0.js",
+    "service-worker.js": "/velo/service-worker.js",
+    "static/css/2.098bc035.chunk.css.map": "/velo/static/css/2.098bc035.chunk.css.map",
+    "static/css/main.f2c1a82c.chunk.css.map": "/velo/static/css/main.f2c1a82c.chunk.css.map",
+    "static/media/Baniere.css": "/velo/static/media/header.7758feb8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f37de9a2.js",
+    "static/css/2.098bc035.chunk.css",
+    "static/js/2.3851afa7.chunk.js",
+    "static/css/main.f2c1a82c.chunk.css",
+    "static/js/main.c16e52e5.chunk.js"
+  ]
+}
