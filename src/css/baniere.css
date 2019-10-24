@@ -1,6 +1,6 @@
 .container-baniere{
     height: 600px;
-    background-image: url("./header.png");
+    background-image: url("./img/header.png");
     display: flex;
 }
 .bordure-baniere{

@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
 import { Map, TileLayer } from 'react-leaflet'
 import MarkerVelo from './Marker'
-import './Map.css';
+import '../css/map.css';
 
 class MapVelo extends Component{
   constructor(props){
     super(props)
     this.state = {
-    lat: 45.763611683929796,
-    lng: 4.874637805443967,
-    zoom: 13,
-    markerIsVisible: false
+      position: {
+        lat: this.props.position.lat,
+        lng: this.props.position.lng
+      },
+      zoom: 13,
+      markerIsVisible: false
   }
   this.loadStation()
 }
@@ -24,8 +26,20 @@ loadStation = () =>{ //Permet de charger les stations après l'animation de la m
   }, 2000);
 }
 
+  //permet de changer le centrage de la ville.
+  updateMap = (lat, lng, city) =>{
+    this.setState({
+      position:{
+        lat: lat,
+        lng: lng
+      }
+    })
+    const marker = this.refs.marker
+    marker.updateMarker(city)
+  }
+
   render(){
-    const position = [this.state.lat, this.state.lng, this.state.zoom]
+    const position = [this.state.position.lat, this.state.position.lng]
     return(
       <div>
       <Map className="map" center={position} zoom={this.state.zoom} id="map">
@@ -34,7 +48,7 @@ loadStation = () =>{ //Permet de charger les stations après l'animation de la m
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {this.state.markerIsVisible ?
-        <MarkerVelo position={position} formulaire={this.props.formulaire} isReserved={this.props.isReserved}/>
+        <MarkerVelo position={position} formulaire={this.props.formulaire} isReserved={this.props.isReserved} ref='marker'/>
         : ''}
       </Map>
       </div>

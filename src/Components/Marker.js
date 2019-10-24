@@ -22,11 +22,14 @@ class MarkerVelo extends Component{
         this.state = {
             error: null,
             isLoaded: false,
-            stations: []
+            stations: [],
+            city: 'lyon'
         }
     }
+
     componentDidMount(){
-        fetch("https://api.jcdecaux.com/vls/v1/stations?contract=Lyon&apiKey=45e68957d549cc855a39a0557d92e8f2f91ffa5f")
+        let city = this.state.city
+        fetch(`https://api.jcdecaux.com/vls/v1/stations?contract=${city}&apiKey=45e68957d549cc855a39a0557d92e8f2f91ffa5f`)
         .then(res => res.json())
         .then(
             (stations) => {
@@ -43,6 +46,16 @@ class MarkerVelo extends Component{
                 })
             }
         )
+    }
+
+
+    updateMarker(city){
+        this.setState({
+            city: city
+        })
+        setTimeout(() => {
+            this.componentDidMount()
+        }, 250);
     }
 
     render(){

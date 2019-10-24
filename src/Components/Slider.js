@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Slider.css';
+import '../css/slider.css';
 
 class SliderVelo extends Component{
     constructor(props){

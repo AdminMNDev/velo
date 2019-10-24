@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Baniere.css'
+import "../css/baniere.css";
 
 class BanniereVelo extends Component{
 

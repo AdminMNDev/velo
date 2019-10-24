@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Menu.css'
+import '../css/menu.css'
 class MenuVelo extends Component{
 
   render(){

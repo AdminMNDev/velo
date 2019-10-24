@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Footer.css'
+import '../css/footer.css'
 
 class FooterVelo extends Component{
   render(){

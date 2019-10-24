@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Compteur.css'
+import '../css/compteur.css'
 
 class Compteur extends Component{
     constructor(props){

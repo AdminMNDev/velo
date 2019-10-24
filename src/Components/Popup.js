@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Popup } from 'react-leaflet'
-import "./popup.css"
+import "../css/popup.css"
 
 class PopupVelo extends Component{
     constructor(props){

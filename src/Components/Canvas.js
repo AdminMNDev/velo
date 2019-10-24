@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Canvas.css'
+import '../css/canvas.css'
 
 class CanvasReservation extends Component {
   constructor(props) {

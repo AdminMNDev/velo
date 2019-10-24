@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Reservation.css'
+import '../css/reservation.css'
 import CanvasReservation from './Canvas';
 
 class ReservationVelo extends Component{
