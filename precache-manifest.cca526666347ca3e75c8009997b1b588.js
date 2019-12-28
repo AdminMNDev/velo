@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1b5d0191291e0d92b0fa1b21716ab10e",
+    "revision": "3d663154f71a3159aa488559b37eb99c",
     "url": "/velo/index.html"
   },
   {
-    "revision": "8d65f0a57bdb790a8f65",
+    "revision": "2d7c0c1d899ef5f2097d",
     "url": "/velo/static/css/2.098bc035.chunk.css"
   },
   {
-    "revision": "3032f492b121ea534c17",
+    "revision": "08aa9febe3cddafe7899",
     "url": "/velo/static/css/main.aed9c5fe.chunk.css"
   },
   {
-    "revision": "8d65f0a57bdb790a8f65",
-    "url": "/velo/static/js/2.dc66984b.chunk.js"
+    "revision": "2d7c0c1d899ef5f2097d",
+    "url": "/velo/static/js/2.62bebd0d.chunk.js"
   },
   {
-    "revision": "3032f492b121ea534c17",
-    "url": "/velo/static/js/main.a95f8162.chunk.js"
+    "revision": "08aa9febe3cddafe7899",
+    "url": "/velo/static/js/main.903da5d8.chunk.js"
   },
   {
     "revision": "f38d61703b2283f088a6",
