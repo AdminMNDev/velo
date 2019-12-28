@@ -31,7 +31,7 @@ class JumbotronVelo extends Component {
                     Dans chaque station, une borne permet d'acquérir une carte (courte durée) 
                     payable par carte bancaire. Le ticket 1 trajet coûte 1,80 € et la formule 24 heures 4 €.
                     L'abonnement longue durée coûte 31 €.</p>
-	                <select id="list" ref="list" onMouseUp={this.selectOption}>
+	                <select id="list" ref="list" onChange={this.selectOption}>
 		                <option value="null">Sélectionner une ville</option>
 		                <option value="amiens">Amiens</option>
 		                <option value="cergy-pontoise">Cergy-pontoise</option>
