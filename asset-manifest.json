@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/velo/static/css/main.aed9c5fe.chunk.css",
-    "main.js": "/velo/static/js/main.09425f06.chunk.js",
-    "main.js.map": "/velo/static/js/main.09425f06.chunk.js.map",
+    "main.js": "/velo/static/js/main.a95f8162.chunk.js",
+    "main.js.map": "/velo/static/js/main.a95f8162.chunk.js.map",
     "runtime-main.js": "/velo/static/js/runtime-main.f37de9a2.js",
     "runtime-main.js.map": "/velo/static/js/runtime-main.f37de9a2.js.map",
     "static/css/2.098bc035.chunk.css": "/velo/static/css/2.098bc035.chunk.css",
     "static/js/2.dc66984b.chunk.js": "/velo/static/js/2.dc66984b.chunk.js",
     "static/js/2.dc66984b.chunk.js.map": "/velo/static/js/2.dc66984b.chunk.js.map",
     "index.html": "/velo/index.html",
-    "precache-manifest.f1ab9db4aad4188ed1f3496b4fc8666e.js": "/velo/precache-manifest.f1ab9db4aad4188ed1f3496b4fc8666e.js",
+    "precache-manifest.ceee306c39a756c192d6ac9e0944affe.js": "/velo/precache-manifest.ceee306c39a756c192d6ac9e0944affe.js",
     "service-worker.js": "/velo/service-worker.js",
     "static/css/2.098bc035.chunk.css.map": "/velo/static/css/2.098bc035.chunk.css.map",
     "static/css/main.aed9c5fe.chunk.css.map": "/velo/static/css/main.aed9c5fe.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.098bc035.chunk.css",
     "static/js/2.dc66984b.chunk.js",
     "static/css/main.aed9c5fe.chunk.css",
-    "static/js/main.09425f06.chunk.js"
+    "static/js/main.a95f8162.chunk.js"
   ]
 }
